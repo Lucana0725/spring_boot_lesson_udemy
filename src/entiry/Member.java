@@ -8,9 +8,9 @@ public class Member {
   private String email;
 
   // コンストラクタ  intには0, Stringにはnullが入る状態
-  // public Member() {
+  public Member() {
 
-  // }
+  }
   // コンストラクタ
   public Member(int id, String name, String email) {
     this.id = id;
@@ -18,7 +18,27 @@ public class Member {
     this.email = email;
   }
 
+  // getter
+  public int getId() {
+    return id;
+  }
+  public String getName() {
+    return name;
+  }
+  public String getEmail() {
+    return email;
+  }
 
+  // setter
+  public void setId(int id) {
+    this.id = id;
+  }
+  public void setName(String name) {
+    this.name = name;
+  }
+  public void  setEmail(String email) {
+    this.email = email;
+  }
 
 
 }
