@@ -1,4 +1,4 @@
-package entiry;
+package entity;
 
 public class Member {
   
