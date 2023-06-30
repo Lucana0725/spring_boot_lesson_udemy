@@ -3,11 +3,14 @@ package demo;
 import java.util.ArrayList;
 
 import entity.Member;
+import service.MemberService;
 import service.MemberServiceImpl;
 
 public class Main {
   public static void main(String[] args) {
-    MemberServiceImpl service = new MemberServiceImpl();
+    // MemberServiceImplをシングルトン化し、privateにしたため下のnewはエラーになる。
+    // MemberServiceImpl service = new MemberServiceImpl();
+    MemberService service = MemberServiceImpl.getInstance();
     
     System.out.println(service.greet(2));
     

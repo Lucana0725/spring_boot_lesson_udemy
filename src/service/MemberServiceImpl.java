@@ -5,6 +5,17 @@ import java.util.ArrayList;
 import entity.Member;
 
 public class MemberServiceImpl implements MemberService {
+
+  // シングルトン
+  private static MemberServiceImpl singleton = new MemberServiceImpl();
+
+  // シングルトン化用コンストラクタ。これで外からnewできなくなる。
+  private MemberServiceImpl() {}
+
+  // MemberServiceImplを呼び出すためのメソッド
+  public static MemberServiceImpl getInstance() {
+    return singleton;
+  }
   
   @Override
   // iの値によって挨拶を変更する
