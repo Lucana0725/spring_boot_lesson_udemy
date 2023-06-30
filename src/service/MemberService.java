@@ -10,4 +10,7 @@ public interface MemberService {
 
   ArrayList<Member> getAll();
 
+  // ミニ課題1
+  int sumOf(int x, int y);
+
 }
